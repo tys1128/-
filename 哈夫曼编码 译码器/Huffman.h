@@ -25,12 +25,16 @@ struct HfNode {
 	}
 };
 class Huffman {
+	vector<HfNode*> hfvec;
 	HfNode* root;
 	int sum;//字符总数
 
 	void Huffman::makeCode(HfNode * t, string c, ofstream& ofile);
 	void makeHuffmanTree(string path);//返回哈夫曼树的根节点
 public:
+	Huffman() {
+		hfvec.resize(128);
+	}
 	void encode(string path);
 	void decode(string path);
 

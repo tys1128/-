@@ -5,11 +5,9 @@ bool compWeight(const HfNode* a, const HfNode* b) {
 	return a->weight < b->weight ? true : false;
 }
 void Huffman::makeHuffmanTree(string path) {
-	const int MAXSIZE = 128;
 	ifstream ifile(path);
-	vector<HfNode*> hfvec(MAXSIZE);
 
-	for (int i = 0; i < MAXSIZE; i++) {//initialization
+	for (int i = 0; i < hfvec.size(); i++) {//initialization
 		hfvec[i] = new HfNode();
 		hfvec[i]->ch = i;
 	}
