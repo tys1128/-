@@ -117,6 +117,7 @@
     <ClInclude Include="Huffman.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="encode file.txt" />
     <Text Include="The Great Gatsby.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -25,7 +25,7 @@ struct HfNode {
 	}
 };
 class Huffman {
-
+	HfNode* root;
 	int sum;//字符总数
 	void Huffman::makeCode(HfNode * t, string c, ofstream& ofile);
 	HfNode* getHuffmanTree(string path);//返回哈夫曼树的根节点

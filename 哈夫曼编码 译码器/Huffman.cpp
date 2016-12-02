@@ -49,7 +49,7 @@ HfNode* Huffman::getHuffmanTree(string path) {
 void Huffman::encode(string path) {
 	ifstream ifile(path);
 	ofstream ofile("encode file.txt");
-	HfNode* root = getHuffmanTree(path);
+	root = getHuffmanTree(path);
 
 	makeCode(root, "", ofile);
 

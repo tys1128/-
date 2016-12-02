@@ -31,5 +31,8 @@
     <Text Include="The Great Gatsby.txt">
       <Filter>资源文件</Filter>
     </Text>
+    <Text Include="encode file.txt">
+      <Filter>资源文件</Filter>
+    </Text>
   </ItemGroup>
 </Project>
