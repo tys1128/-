@@ -29,7 +29,7 @@ class Huffman {
 	int sum;//字符总数
 
 	void Huffman::makeCode(HfNode * t, string c, ofstream& ofile);
-	HfNode* getHuffmanTree(string path);//返回哈夫曼树的根节点
+	void makeHuffmanTree(string path);//返回哈夫曼树的根节点
 public:
 	void encode(string path);
 	void decode(string path);

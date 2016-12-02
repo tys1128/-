@@ -4,7 +4,7 @@
 bool compWeight(const HfNode* a, const HfNode* b) {
 	return a->weight < b->weight ? true : false;
 }
-HfNode* Huffman::getHuffmanTree(string path) {
+void Huffman::makeHuffmanTree(string path) {
 	const int MAXSIZE = 128;
 	ifstream ifile(path);
 	vector<HfNode*> hfvec(MAXSIZE);
@@ -42,13 +42,13 @@ HfNode* Huffman::getHuffmanTree(string path) {
 		stable_sort(hfvec.begin() + i + 1, hfvec.end(), compWeight);
 	}
 	ifile.close();
-	return hfvec.back();
+	root = hfvec.back();
 }
 
 void Huffman::encode(string path) {
 	ifstream ifile(path);
 	ofstream ofile("encode file.txt");
-	root = getHuffmanTree(path);
+	makeHuffmanTree(path);
 
 	makeCode(root, "", ofile);
 
