@@ -1,6 +1,6 @@
-#include "Huffman.h"
 #include<iomanip>
 #include<iterator>
+#include "Huffman.h"
 bool compWeight(const HfNode* a, const HfNode* b) {
 	return a->weight < b->weight ? true : false;
 }
@@ -29,7 +29,6 @@ HfNode* Huffman::getHuffmanTree(string path) {
 		else
 			i++;
 	}
-
 	stable_sort(hfvec.begin(), hfvec.end(), compWeight);
 	for (int i = 0; i < hfvec.size() - 1; i++) {//×éºÏ
 		HfNode* t = new HfNode();
@@ -64,8 +63,9 @@ void Huffman::makeCode(HfNode* t, string c, ofstream& ofile) {
 	}
 	if (t->isLeaf()) {
 		ofile << t->ch << "\t" << setprecision(2) << t->weight * 100 / (float)sum << "%\t\t" << t->code << endl;
-		ofile.flush();
+		//ofile.flush();
 	}
 }
 void Huffman::decode(string path) {
+
 }
